@@ -127,6 +127,7 @@ public class TicTacToe {
             if(i!=2)
             System.out.println("\n---------");
         }
+        System.out.println();
     }
     public static void main(String[] args) {
         TicTacToe t1 = new TicTacToe();
