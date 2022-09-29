@@ -113,7 +113,77 @@ public class TicTacToe {
         }
     }
 
+    public void computerMoves(int computerChoice){
+        for(int i=0;i<8;i++){
+            String line="", positions="";
+            switch(i){
+                case 0:
+                line = board[0][0]+board[0][1]+board[0][2];
+                positions="789";
+                break;
 
+                case 1:
+                line = board[1][0]+board[1][1]+board[1][2];
+                positions="456";
+                break;
+
+                case 2:
+                line = board[2][0]+board[2][1]+board[2][2];
+                positions="123";
+                break;
+
+                case 3:
+                line = board[0][0]+board[1][1]+board[2][2];
+                positions="753";
+                break;
+
+                case 4:
+                line = board[0][2]+board[1][1]+board[2][0];
+                positions="951";
+                break;
+
+                case 5:
+                line = board[0][0]+board[1][0]+board[2][0];
+                positions="741";
+                break;
+
+                case 6:
+                line = board[0][1]+board[1][1]+board[2][1];
+                positions="852";
+                break;
+
+                case 7:
+                line = board[0][2]+board[1][2]+board[2][2];
+                positions="963";
+                break;
+            }
+            switch (line) {
+                case "OO ":
+                case "XX ":
+                inputValidationCheck(Character.getNumericValue(positions.charAt(2)), computerChoice);
+                return;
+
+                case "O O":
+                case "X X":
+                inputValidationCheck(Character.getNumericValue(positions.charAt(1)), computerChoice);
+                return;
+
+                case " OO":
+                case " XX":
+                inputValidationCheck(Character.getNumericValue(positions.charAt(0)), computerChoice);
+                return;
+                
+                default:
+                break;
+            }
+        }
+        Random rand = new Random();
+        int pos;
+        do{
+            pos = rand.nextInt(1,10);
+        }while(!(inputValidationCheck(pos, computerChoice)));
+        return;
+    }
     public void display(){
         for(int i=0;i<3;i++){
             for(int j=0;j<3;j++){
