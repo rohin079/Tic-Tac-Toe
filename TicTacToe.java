@@ -9,49 +9,51 @@ public class TicTacToe {
             }
         }
     }
+
     public String winnerCheck(){
-    for(int i=0;i<8;i++){
-        String line="";
-        switch(i){
-            case 0:
-            line = board[0][0]+board[0][1]+board[0][2];
-            break;
+        for(int i=0;i<8;i++){
+            String line="";
+            switch(i){
+                case 0:
+                line = board[0][0]+board[0][1]+board[0][2];
+                break;
 
-            case 1:
-            line = board[1][0]+board[1][1]+board[1][2];
-            break;
+                case 1:
+                line = board[1][0]+board[1][1]+board[1][2];
+                break;
 
-            case 2:
-            line = board[2][0]+board[2][1]+board[2][2];
-            break;
+                case 2:
+                line = board[2][0]+board[2][1]+board[2][2];
+                break;
 
-            case 3:
-            line = board[0][0]+board[1][1]+board[2][2];
-            break;
+                case 3:
+                line = board[0][0]+board[1][1]+board[2][2];
+                break;
 
-            case 4:
-            line = board[0][2]+board[1][1]+board[2][0];
-            break;
+                case 4:
+                line = board[0][2]+board[1][1]+board[2][0];
+                break;
 
-            case 5:
-            line = board[0][0]+board[1][0]+board[2][0];
-            break;
+                case 5:
+                line = board[0][0]+board[1][0]+board[2][0];
+                break;
 
-            case 6:
-            line = board[0][1]+board[1][1]+board[2][1];
-            break;
+                case 6:
+                line = board[0][1]+board[1][1]+board[2][1];
+                break;
 
-            case 7:
-            line = board[0][2]+board[1][2]+board[2][2];
-            break;
+                case 7:
+                line = board[0][2]+board[1][2]+board[2][2];
+                break;
+            }
+            if(line.equals("XXX"))
+                return "X";
+            else if(line.equals("OOO"))
+                return "O";
         }
-        if(line.equals("XXX"))
-            return "X";
-        else if(line.equals("OOO"))
-            return "O";
+        return "1";
     }
-    return "1";
-}
+
     public boolean inputValidationCheck(int pos, int player){
         String element="";
         int x=0,y=0;
@@ -184,6 +186,7 @@ public class TicTacToe {
         }while(!(inputValidationCheck(pos, computerChoice)));
         return;
     }
+
     public void display(){
         for(int i=0;i<3;i++){
             for(int j=0;j<3;j++){
@@ -199,6 +202,7 @@ public class TicTacToe {
         }
         System.out.println();
     }
+    
     public static void main(String[] args) {
         String play;
         Scanner sc = new Scanner(System.in);
