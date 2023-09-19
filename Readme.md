@@ -12,4 +12,6 @@ The task was to design the game of Tic-Tac-Toe for someone to play against the c
 1) Rohin Mehrotra<br>
 2) Ayush Singh Kushwah<br>
 3) Smriti Rai<br>
-4) Pulkit Singh<br></p>
+4) Pulkit Singh<br>
+5) Ayush Singh Kushwah
+</p>
