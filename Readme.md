@@ -13,5 +13,5 @@ The task was to design the game of Tic-Tac-Toe for someone to play against the c
 2) Ayush Singh Kushwah<br>
 3) Smriti Rai<br>
 4) Pulkit Singh<br>
-5) Ayush Singh Kushwah
+5) Vidhant Maan Thapa
 </p>
